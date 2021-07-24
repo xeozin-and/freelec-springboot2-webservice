@@ -14,28 +14,11 @@ repositories {
 }
 
 dependencies {
-    // Spring MVC
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    // Spring JDBC
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    // Live reload
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    // For stand-alone Tomcat
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-
-    // JSP (JSTL, EL)
-    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
-    runtimeOnly 'javax.servlet:jstl'
-
-    // MariaDB JDBC Driver
-    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-
-    // OWASP Java Encoder
-    implementation 'org.owasp.encoder:encoder:1.2.+'
-    implementation 'org.owasp.encoder:encoder-jsp:1.2.+'
-
     implementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'junit:junit:4.13'
 }
 
-test { useJUnitPlatform() }
+test {
+    useJUnitPlatform()
+}
